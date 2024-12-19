@@ -18,5 +18,6 @@ Then run an editor from inside that shell to do code editing. Anything that supp
 
 Use `dune` as normal from inside that shell to build and run the project
 
-`dune build` - build the project
-`dune exec bamaoc24 1` - run the solution for day 1 part 1
+- `dune build` - build the project
+
+- `dune exec bamaoc24 1` - run the solution for day 1 part 1
