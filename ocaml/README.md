@@ -2,8 +2,7 @@
 
 I'm trying `nix` this year for reproducible builds. I'm using
 [opam-nix](https://github.com/tweag/opam-nix) for that. To take advantage of
-this, you need to have `nix` installed and nix flakes enabled. I think you
-also need to be running a Linux x86_64 system.
+this, you need to have `nix` installed and nix flakes enabled.
 
 To start a development shell (similar to activating a python virtual env), you
 run `nix develop` in this directory. The first time you do this, it will install
