@@ -5,12 +5,12 @@ let sorted_pair_diff xs ys =
     let distance pair = abs (fst pair - snd pair) in
     combine xs_sorted ys_sorted |> map distance |> fold_left ( + ) 0
 
+
 let pair_parser =
     let open CCParse in
-    let* n1 = U.int in
-    let* _ = skip_white in
-    let* n2 = CCParse.U.int in
-    pure (n1, n2)
+    let* x = U.int <* skip_white in
+    let* y = U.int in
+    pure (x, y)
 
 let part1 () = 
     let pairs = Aoclib.parse_lines pair_parser in
