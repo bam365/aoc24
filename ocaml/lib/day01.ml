@@ -5,7 +5,6 @@ let sorted_pair_diff xs ys =
     let distance pair = abs (fst pair - snd pair) in
     combine_shortest xs_sorted ys_sorted |> map distance |> fold_left ( + ) 0
 
-
 let pair_parser =
     let open CCParse in
     let* x = U.int <* skip_white in
