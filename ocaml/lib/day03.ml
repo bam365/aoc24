@@ -1,13 +1,13 @@
 module Instruction = struct
-    type t = int * int
+    type t = Mul of (int * int)
 
-    let eval (x, y) = x * y
+    let eval (Mul(x, y)) = x * y
 
     module Parsers = struct
         open CCParse
 
         let single = 
-            pure (fun x y -> (x, y))
+            pure (fun x y -> Mul(x, y))
                 <*> (string "mul(") *> U.int <* string "," <*> U.int <* string ")"
 
         let interspersed = many (take_until_success single) |> map (List.map snd)
