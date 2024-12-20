@@ -16,7 +16,7 @@ module Report = struct
 end
 
 let part1 () = 
-    Aoclib.parse_lines Report.parser
+    Aoclib.parse_lines_exn Report.parser
     |> CCList.filter Report.is_safe
     |> CCList.length
     |> Printf.printf "%d\n"
