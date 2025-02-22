@@ -1,7 +1,6 @@
 let sorted_pair_diff xs ys = 
     let open CCList in
-    let xs_sorted = sort (CCInt.compare) xs in
-    let ys_sorted = sort (CCInt.compare) ys in
+    let (xs_sorted, ys_sorted) = (sort CCInt.compare xs, sort CCInt.compare ys) in
     let distance pair = abs (fst pair - snd pair) in
     combine_shortest xs_sorted ys_sorted |> map distance |> fold_left ( + ) 0
 
