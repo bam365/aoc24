@@ -5,4 +5,5 @@ edition = "2021"
 
 [dependencies]
 nom = "8"
+memoize = "0.5.1"
 
